@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oppgave 4</title>
+    <style>
+        #Antall{
+            width: 30px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1>Bestilling av kinobiletter</h1>
+<table>
+    <label>Velg Film</label>
+    <select id="Film">
+        <option>Chose movie</option>
+        <option>Dune: Part Two</option>
+        <option>Bob Marley: One Love</option>
+        <option>Wonka</option>
+        <option>Kung Fu Panda 4</option>
+        <option>Night Swim</option>
+    </select>
+
+    <tr><td>Antall</td><td>
+        <input type="number" id="Antall" min="1"/><span id="antallError" style="color: red"></span>
+    </td></tr>
+
+    <tr><td>Fornavn</td><td>
+        <input type="text" id="Fornavn"/> <span id="fornavnError" style="color: red"></span>
+    </td></tr>
+    <tr><td>Etternavn</td><td>
+        <input type="text" id="Etternavn"/><span id="etternavnError" style="color: red"></span>
+        <td></tr>
+
+    <tr><td>Telefonnr</td><td>
+        <input type="text" id="Telefonnr"/><span id="telefonnrError" style="color: red"></span>
+    </td></tr>
+
+    <tr><td>Epost</td><td>
+        <input type="text" id="Epost"/><span id="epostError" style="color: red"></span>
+    </td></tr>
+
+    <br>
+</table>
+<button onclick="tickets()">Kjøp Billett</button>
+<div id="Transaksjon"></div>
+<h2>Alle Billetter</h2>
+<button onclick="clearBilettRegister()">Slett alle billettene</button>
+</body>
+<script src="¨jaja.js"></script>
+</html>
