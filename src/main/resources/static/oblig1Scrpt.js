@@ -11,10 +11,11 @@ function visBilettRegister(){
     document.getElementById("Transaksjon").innerHTML=ut;
 }
 function tickets(){
+
     const antallError = document.getElementById("ErrorAntall");
     const fornavnError = document.getElementById("ErrorFornavn");
     const etternavnError = document.getElementById("ErrorEtternavn");
-    const telefonnrError = document.getElementById("ErrorTelefonnr");
+    const telefonnrError = document.getElementById("ErrorTelefonnr"); // Add this line
     const epostError = document.getElementById("ErrorEpost");
 
     const film = document.getElementById("Film").value;
@@ -26,12 +27,14 @@ function tickets(){
 
     let isValid = true;
 
+
     if (antall === "") {
         antallError.style.visibility = "visible";
         isValid = false;
     } else {
         antallError.style.visibility = "hidden";
     }
+
 
     if (fornavn === "") {
         fornavnError.style.visibility = "visible";
@@ -40,6 +43,7 @@ function tickets(){
         fornavnError.style.visibility = "hidden";
     }
 
+
     if (etternavn === "") {
         etternavnError.style.visibility = "visible";
         isValid = false;
@@ -47,14 +51,16 @@ function tickets(){
         etternavnError.style.visibility = "hidden";
     }
 
-    if (telefonnr === "") {
+    const telefonnrRegex = /^[0-9]{8}$/;
+    if (telefonnr === "" || !telefonnrRegex.test(Number(telefonnr))) {
         telefonnrError.style.visibility = "visible";
         isValid = false;
     } else{
         telefonnrError.style.visibility = "hidden";
     }
 
-    if (epost === "") {
+    const epostRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (epost === "" || !epostRegex.test(epost)) {
         epostError.style.visibility = "visible";
         isValid = false;
     } else{
