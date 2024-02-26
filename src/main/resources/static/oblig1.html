@@ -2,53 +2,89 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Oppgave 4</title>
+    <title>Oblig 1</title>
     <style>
-        #Antall{
-            width: 30px;
-            margin-top: 20px;
-            margin-bottom: 20px;
+
+        #Antall {
+            width: 45px;
         }
+        .error {
+            margin-left: 100px;
+            color: red;
+            visibility:hidden;
+        }
+        #info {
+            display: block;
+            float: left;
+            width: 100px;
+        }
+        table, th, td {
+            border: 1px solid bisque;
+            border-collapse: collapse;
+            padding: 0 10px 0 5px;
+        }
+
     </style>
 </head>
 <body>
 <h1>Bestilling av kinobiletter</h1>
-<table>
-    <label>Velg Film</label>
-    <select id="Film">
-        <option>Chose movie</option>
-        <option>Dune: Part Two</option>
-        <option>Bob Marley: One Love</option>
-        <option>Wonka</option>
-        <option>Kung Fu Panda 4</option>
-        <option>Night Swim</option>
-    </select>
+<label id="info" for="Film">Velg Film</label>
 
-    <tr><td>Antall</td><td>
-        <input type="number" id="Antall" min="1"/><span id="antallError" style="color: red"></span>
-    </td></tr>
+<select id="Film">
+    <option>Chose movie</option>
+    <option>Dune: Part Two</option>
+    <option>Bob Marley: One Love</option>
+    <option>Wonka</option>
+    <option>Kung Fu Panda 4</option>
+    <option>Night Swim</option>
+</select>
+<br>
 
-    <tr><td>Fornavn</td><td>
-        <input type="text" id="Fornavn"/> <span id="fornavnError" style="color: red"></span>
-    </td></tr>
-    <tr><td>Etternavn</td><td>
-        <input type="text" id="Etternavn"/><span id="etternavnError" style="color: red"></span>
-        <td></tr>
+<br>
+<label id="info" for="Antall">Antall</label>
+<input type="number" name="antall" id="Antall" min="1">
+<label class="error" id="ErrorAntall" for="Antall">Må skrive inn et tall</label>
+<br>
 
-    <tr><td>Telefonnr</td><td>
-        <input type="text" id="Telefonnr"/><span id="telefonnrError" style="color: red"></span>
-    </td></tr>
+<br>
+<label id="info" for="Fornavn">Fornavn</label>
+<input type="text" name="fornavn" id="Fornavn">
+<label class="error" id="ErrorFornavn" for="Fornavn">Må skrive inn et Fornavn</label>
+<br>
 
-    <tr><td>Epost</td><td>
-        <input type="text" id="Epost"/><span id="epostError" style="color: red"></span>
-    </td></tr>
+<label id="info" for="Etternavn">Etternavn</label>
+<input type="text" name="etternavn" id="Etternavn">
+<label class="error" id="ErrorEtternavn" for="Etternavn">Må skrive inn et Etternavn</label>
+<br>
 
-    <br>
-</table>
+<label id="info" for="Telefonnr">Telefonnr</label>
+<input type="text" name="telefonnr" id="Telefonnr" min="8">
+<label class="error" id="ErrorTelefonnr" for="Telefonnr">Må skrive inn et gyldig telefonnr</label>
+<br>
+
+<label id="info" for="Epost">Epost</label>
+<input type="text" name="epost" id="Epost">
+<label class="error" id="ErrorEpost" for="Epost">Må skrive inn Eposten din</label>
+<br>
+
+<br>
 <button onclick="tickets()">Kjøp Billett</button>
+<br>
+
 <div id="Transaksjon"></div>
 <h2>Alle Billetter</h2>
+<table id="table">
+    <tr>
+        <th>Antall billetter</th>
+        <th>Fornavn</th>
+        <th>Etternavn</th>
+        <th>Telefon</th>
+        <th>Epost</th>
+        <th>Film</th>
+    </tr>
+</table>
+<br>
 <button onclick="clearBilettRegister()">Slett alle billettene</button>
 </body>
-<script src="¨jaja.js"></script>
+<script src="oblig1Scrpt.js"></script>
 </html>
