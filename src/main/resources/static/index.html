@@ -8,7 +8,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="oblig2Script.js"></script>
     <style>
-        /* Your CSS styles */
         .error {
             color: red;
             visibility:hidden;
@@ -21,6 +20,9 @@
         }
         .short-input {
             width: 100px;
+        }
+        .half-input {
+            width: 20%;
         }
         table, th, td {
             border: 1px solid bisque;
@@ -36,7 +38,7 @@
 
 <div class="form-group">
     <label for="Film">Velg Film</label>
-    <select id="Film" class="form-control">
+    <select id="Film" class="form-control half-input">
         <option value="Dune: Part Two">Dune: Part Two</option>
         <option value="Bob Marley: One Love">Bob Marley: One Love</option>
         <option value="Wonka">Wonka</option>
@@ -53,25 +55,25 @@
 
 <div class="form-group">
     <label for="Fornavn">Fornavn</label>
-    <input type="text" class="form-control" name="fornavn" id="Fornavn">
+    <input type="text" class="form-control half-input" name="fornavn" id="Fornavn">
     <label class="error" id="ErrorFornavn" for="Fornavn">Må skrive inn et Fornavn</label>
 </div>
 
 <div class="form-group">
     <label for="Etternavn">Etternavn</label>
-    <input type="text" class="form-control" name="etternavn" id="Etternavn">
+    <input type="text" class="form-control half-input" name="etternavn" id="Etternavn">
     <label class="error" id="ErrorEtternavn" for="Etternavn">Må skrive inn et Etternavn</label>
 </div>
 
 <div class="form-group">
     <label for="Telefonnr">Telefonnr</label>
-    <input type="text" class="form-control" name="telefonnr" id="Telefonnr" min="8">
+    <input type="text" class="form-control half-input" name="telefonnr" id="Telefonnr" min="8">
     <label class="error" id="ErrorTelefonnr" for="Telefonnr">Må skrive inn et gyldig telefonnr</label>
 </div>
 
 <div class="form-group">
     <label for="Epost">Epost</label>
-    <input type="text" class="form-control" name="epost" id="Epost">
+    <input type="text" class="form-control half-input" name="epost" id="Epost">
     <label class="error" id="ErrorEpost" for="Epost">Må skrive inn en gyldig Epost</label>
 </div>
 
