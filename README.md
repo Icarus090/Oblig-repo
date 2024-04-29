@@ -1,6 +1,8 @@
 # Oblig1
 ==============
 
+Link til Youtube: https://youtu.be/m6KjPWz9DkE
+
 OsloMet brukernavn: S376930
 
 GitHub brukernavn: Icarus090
